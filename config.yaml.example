@@ -1,0 +1,37 @@
+# HARA 评测任务 - 本地配置文件（示例）
+# 使用方法：cp config.yaml.example config.yaml，然后修改 config.yaml
+# config.yaml 中的值会覆盖 config.py 中的默认值
+# config.yaml 不会被 git 跟踪
+
+# 数据路径
+# TRAIN_DATA_PATH: "data/train.json"
+# VAL_DATA_PATH: "data/val.json"
+# OUTPUT_DIR: "outputs"
+
+# 模型配置
+MODEL_NAME: "Qwen/Qwen2.5-7B-Instruct"
+MODEL_SOURCE: "huggingface"  # "huggingface" 或 "modelscope"
+HUGGINGFACE_CACHE_DIR: null   # null 表示使用默认缓存路径
+MODELSCOPE_CACHE_DIR: null
+# MAX_LENGTH: 8192
+# TEMPERATURE: 0.7
+# TOP_P: 0.9
+
+# 训练配置
+# BATCH_SIZE: 1
+# GRADIENT_ACCUMULATION_STEPS: 4
+# LEARNING_RATE: 2e-5
+# NUM_EPOCHS: 10
+# WARMUP_STEPS: 100
+# TRAIN_SPLIT_RATIO: 0.95  # 训练集占比（剩余为验证集）
+
+# LoRA 配置
+# USE_LORA: true
+# LORA_R: 16
+# LORA_ALPHA: 32
+# LORA_DROPOUT: 0.1
+
+# 推理配置
+INFERENCE_BATCH_SIZE: 8        # 推理时每个 batch 处理的样本数
+# NUM_BEAMS: 4
+
